@@ -5,11 +5,13 @@ class Tracker
   def initialize(options={})
     self.url = options[:url] || "http://classics.mit.edu/Tzu/artwar.1b.txt"
 
+    self.average_prose = 300
+    self.average_screen = 180
   end
 
   def self.rspec_works
     true
-  end
+  end 
 
   ### END CLASS METHODS
 

@@ -12,6 +12,14 @@ describe "Tracker" do
     it "should not raise an error when initializing without any options" do 
       expect { Tracker.new }.to_not raise_error
     end
+
+    it "should set the default prose to 300 wpm at initialization" do
+      Tracker.new.average_prose.should eq(300)
+    end
+
+    it "should set the default screen to 180 wpm at initialization" do
+      Tracker.new.average_screen.should eq(180)
+    end
   end
   context "connect to web" do
     before(:each) do 
@@ -25,6 +33,5 @@ describe "Tracker" do
     it "should default the url to art of war.1b" do
       @tracker.url.should eq(@default_url)
     end
-
   end
 end
