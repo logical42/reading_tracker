@@ -20,6 +20,9 @@ describe "Tracker" do
     it "should set the default screen to 180 wpm at initialization" do
       Tracker.new.average_screen.should eq(180)
     end
+    it "should parse the book from the url" do
+      Tracker.new.book.should_not eq("")
+    end
   end
   context "connect to web" do
     before(:each) do 
