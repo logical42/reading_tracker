@@ -10,7 +10,7 @@ describe "Tracker" do
       @tracker = Tracker.new
     end
     it "should have a default url" do
-      @tracker.url.should_not be_blank
+      @tracker.url.should_not eq("")
     end
   end
 end
