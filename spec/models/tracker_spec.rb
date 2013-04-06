@@ -27,7 +27,7 @@ describe "Tracker" do
   context "connect to web" do
     before(:each) do 
       @tracker = Tracker.new
-      @default_url = "http://classics.mit.edu/Tzu/artwar.1b.txt"
+      @default_url = "http://classics.mit.edu/Confucius/doctmean.1b.txt"
     end
     it "should have a default url" do
       @tracker.url.should_not eq("")
@@ -35,6 +35,12 @@ describe "Tracker" do
 
     it "should default the url to art of war.1b" do
       @tracker.url.should eq(@default_url)
+    end
+  end
+  context "parsing" do
+    it "should be able to choose a random passage and it should be greater than the min word length" do
+      tracker = Tracker.new(min_word_count: 100)
+      tracker.pick_random_passage.split(" ").count.should > tracker.min_word_count
     end
   end
 end
