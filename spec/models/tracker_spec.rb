@@ -5,4 +5,12 @@ describe "Tracker" do
       Tracker.rspec_works.should eq(true)
     end
   end
+  context "connect to web" do
+    before(:each) do 
+      @tracker = Tracker.new
+    end
+    it "should have a default url" do
+      @tracker.url.should_not be_blank
+    end
+  end
 end
