@@ -40,7 +40,7 @@ describe "Tracker" do
   context "parsing" do
     it "should be able to choose a random passage and it should be greater than the min word length" do
       tracker = Tracker.new(min_word_count: 100)
-      tracker.pick_random_passage.split(" ").count.should > tracker.min_word_count
+      tracker.book.pick_random_passage.split(" ").count.should > tracker.min_word_count
     end
   end
 end
