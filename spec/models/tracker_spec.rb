@@ -7,7 +7,7 @@ describe "Tracker" do
   end
   context "initialization" do
     it "should take an optional hash when initializing" do 
-      expect { Tracker.new(url: "asdf") }.to_not raise_error
+      expect { Tracker.new(url: "http://classics.mit.edu/Confucius/learning.1b.txt") }.to_not raise_error
     end
     it "should not raise an error when initializing without any options" do 
       expect { Tracker.new }.to_not raise_error
