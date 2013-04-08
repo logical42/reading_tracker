@@ -10,8 +10,5 @@ describe "WPMCalculator" do
       tracker = Tracker.new
       tracker.book.parse_passages.last.size.should == 462 
     end
-    it "calculates the accurate time in seconds" do
-        
-    end
   end
 end
