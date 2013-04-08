@@ -43,4 +43,14 @@ describe "Tracker" do
       tracker.book.pick_random_passage.split(" ").count.should > tracker.min_word_count
     end
   end
+  context "words per minute calculation" do
+    before(:each) do
+      tracker = Tracker.new
+      @default_url = "http://classics.mit.edu/Confucius/doctmean.1b.txt"
+    end
+    it "should accuratly calculate the words per minute of a passage" do
+      tracker = Tracker.new
+      tracker.book.parse_passages.last.size.should == 462 
+    end
+  end
 end

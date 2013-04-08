@@ -2,7 +2,7 @@ require 'open-uri'
 load "./book.rb"
 class Tracker
   attr_accessor :url,               :average_prose,     :average_screen, 
-                :user_wpm,          :min_word_count, :book
+                :user_wpm,          :min_word_count,    :book
   def initialize(options={})
     self.url = options[:url] || "http://classics.mit.edu/Confucius/doctmean.1b.txt"
     self.min_word_count = options[:min_word_count] || 100
