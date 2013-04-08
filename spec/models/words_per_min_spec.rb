@@ -6,9 +6,12 @@ describe "WPMCalculator" do
       tracker = Tracker.new
       @default_url = "http://classics.mit.edu/Confucius/doctmean.1b.txt"
     end
-    it "should count the words in the passage" do
+    it "should count the words in a passage" do
       tracker = Tracker.new
       tracker.book.parse_passages.last.size.should == 462 
+    end
+    it "calculates the accurate time in seconds" do
+        
     end
   end
 end
